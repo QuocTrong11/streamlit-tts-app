@@ -4,8 +4,8 @@ import zlib
 import requests
 import time
 
-API_KEY = SBRGUwzOfB1UXqKUAgI6UF5FY2L6tw9A
-TTS_URL = https://api.fpt.ai/hmi/tts/v5
+API_KEY = "SBRGUwzOfB1UXqKUAgI6UF5FY2L6tw9A" # Thêm dấu ngoặc kép
+TTS_URL = "https://api.fpt.ai/hmi/tts/v5"   # Thêm dấu ngoặc kép
 
 def decode_deflate_base64(b64_string):
     try:
