@@ -43,6 +43,6 @@ if b64_text:
         else:
             st.error("Không thể tạo giọng nói.")
     else:
-        st.error("❌ Không thể giải mã văn bản.")
+        st.error(b64_text)
 else:
     st.warning("🔗 Không có tham số `text=` trong URL.")
