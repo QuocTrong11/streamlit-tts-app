@@ -38,7 +38,7 @@ b64_text = params.get("text", [None])
 st.markdown(b64_text)
 if b64_text:
     decoded_text = decode_deflate_base64(b64_text)
-    if decoded_text:
+    if decoded_text != None:
         st.markdown(f"**📜 Văn bản:** {decoded_text}")
         st.markdown("🎤 Đang gọi FPT.AI TTS...")
         audio_url = call_fpt_tts(decoded_text)
