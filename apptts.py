@@ -23,7 +23,7 @@ def call_fpt_tts(text):
         'speed': '1',
         'voice': 'leminh'
     }
-    response = requests.request('POST', url, data=payload.encode('utf-8'), headers=headers)
+    response = requests.request('POST', TTS_URL, data=payload.encode('utf-8'), headers=headers)
 
 
 st.title("🔊 Phát giọng nói từ văn bản (FPT.AI TTS)")
