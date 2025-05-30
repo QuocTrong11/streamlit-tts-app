@@ -3,7 +3,7 @@ import base64
 import zlib
 import requests
 
-API_KEY = "YOUR_MINIMAX_API_KEY"  # <- Thay bằng khóa Minimax của bạn
+API_KEY = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJHcm91cE5hbWUiOiI0MS4gUXXhu5FjIFRy4buNbmciLCJVc2VyTmFtZSI6IjQxLiBRdeG7kWMgVHLhu41uZyIsIkFjY291bnQiOiIiLCJTdWJqZWN0SUQiOiIxOTI4MTk4NTA4MjkzMTMyODA1IiwiUGhvbmUiOiIiLCJHcm91cElEIjoiMTkyODE5ODUwODI4ODkzODE2NyIsIlBhZ2VOYW1lIjoiIiwiTWFpbCI6InRyYW50cm9uZzAxMDEyMDIxQGdtYWlsLmNvbSIsIkNyZWF0ZVRpbWUiOiIyMDI1LTA1LTMwIDEwOjMxOjAwIiwiVG9rZW5UeXBlIjoxLCJpc3MiOiJtaW5pbWF4In0.s2ZQmCVFYwkyyJ9D3BxtMk3fVPZe9yRYVka1PW6uEDCMwSLJVoYikGPgUyiYMWTJScykuqT4OCyY1N78pHM5HKDM9WwO5bB7OHC08o7Nld4HaGTBRAdug3-dB3Ydv76J1GxPAXrFs5fT9xqV0aOSiEwpQROI1TrD7aGzCnqHSgL6yKQ3othfl9Zj9IDa0NWRExow7sGWbWD5rrvJcyn4fpyCXbvkuMg6ma4psrFoYOrGZNukurb22LtcH_eV5pwFhKq0jgqUEoW1b7skxkT0eBwZSGxxnCVjmGgKfjqMtCPB4ONXNDDada6wXu53Eo4_Wpy5p7jfvUThsw-EvmAMrA"  
 TTS_URL = "https://api.minimax.chat/v1/tts"
 
 def decode_deflate_base64(b64_string):
@@ -35,7 +35,7 @@ def call_minimax_tts(text):
 
 st.title("🔊 Trình phát giọng nói từ văn bản")
 
-params = st.experimental_get_query_params()
+params = st.query_params
 b64_text = params.get("text", [None])[0]
 
 if b64_text:
