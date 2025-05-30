@@ -33,6 +33,7 @@ def call_fpt_tts(text):
 st.title("🔊 Phát giọng nói từ văn bản (FPT.AI TTS)")
 
 params = st.query_params
+st.markdown(params)
 b64_text = params.get("text", [None])[0]
 
 if b64_text:
