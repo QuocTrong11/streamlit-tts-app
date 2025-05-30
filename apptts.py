@@ -35,7 +35,7 @@ st.title("🔊 Phát giọng nói từ văn bản (FPT.AI TTS)")
 params = st.query_params
 st.markdown(params)
 b64_text = params.get("text", [None])[0]
-
+st.markdown(b64_text)
 if b64_text:
     decoded_text = decode_deflate_base64(b64_text)
     if decoded_text:
